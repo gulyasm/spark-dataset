@@ -1,10 +1,9 @@
 package hu.gulyasm.spark;
 
 import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.*;
+import org.apache.spark.api.java.function.FlatMapFunction;
+import org.apache.spark.api.java.function.MapFunction;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.GroupedDataset;
@@ -12,7 +11,6 @@ import org.apache.spark.sql.SQLContext;
 import scala.Tuple2;
 
 import java.util.Arrays;
-import java.util.Map;
 
 public class Application {
     public static void main(String[] args) {
@@ -42,6 +40,7 @@ public class Application {
 
 
 
+        /*
         // =========== RDD API
 
         JavaRDD<String> lines2 = context.textFile(path);
@@ -76,7 +75,7 @@ public class Application {
         });
 
         result.saveAsTextFile("/home/gulyasm/workspace/spark1");
-
+        */
     }
 
 }
